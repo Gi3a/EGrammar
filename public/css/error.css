@@ -1,0 +1,75 @@
+
+/* ===================
+	Error Settings
+=================== */
+	.error{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		height: 100vh;
+		justify-content: center;
+		text-align: center;
+		background: #f9f9f9;
+	}
+	
+	.error img{
+		width: 40%;
+		height: auto;
+		border-radius: 10px;
+		overflow: hidden;
+	}
+
+	.error__title{
+		position: absolute;
+		padding: 2%;
+		color: #000;
+		transition: 0.4s all;
+		background: #fff;
+		opacity: 0.8;
+		border-radius: 10px;
+	}
+
+	.error__title:hover{
+		padding: 4%;
+	}
+
+	.error__title p{
+		font-size: 25px;
+		font-weight: bold;
+		margin: 7% 0;
+	}
+	
+
+
+/* ===================
+	Mobile Settings 763x1024
+=================== */
+
+@media screen and (min-width: 763px) and (max-width: 1024px){
+
+	.error img{
+		width: 55%;
+	}
+
+
+}
+
+
+
+/* ===================
+	Mobile Settings 100x763
+=================== */
+
+@media screen and (min-width: 100px) and (max-width: 763px){
+	
+	.error img{
+		width: 70%;
+	}
+
+	.error__title p{
+		font-size: 18px;
+		margin: 5% 0;
+	}
+	
+
+}

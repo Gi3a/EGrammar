@@ -1,0 +1,536 @@
+
+
+
+/* ===================
+	Settings
+=================== */
+
+.page{
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+}
+
+
+hr{
+	width: 30%;
+	margin: auto;
+	border: none;
+    border-top: 1px solid #ccc;
+    background: #fff;
+}
+
+/* ===================
+	0. Other blocks
+=================== */
+
+	.page nav {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		width: 100%;
+	}
+
+	nav svg {
+		color: #2a81dd !important;
+		transition: 0.4s all;
+		background-color: transparent;
+		padding: 10px;
+	}
+
+	nav svg:hover{
+		background-color: #efefef;
+		border-radius: 25px;
+	}
+
+
+	nav > div {
+		display: flex;
+		padding: 15px 0;
+		margin: 15px 0;
+		flex-direction: column;
+		text-align: center;
+		align-items: center;
+		width: 33.3%;
+	}
+
+	nav > svg
+	{
+		width: 100px;
+	}
+
+	.test-title > span {
+		display: flex;
+		padding: 15px 0;
+	}
+
+	.test-title {
+		display: flex;
+		flex-direction: column;
+		font-size: 25px;
+		font-weight: bold;
+	}
+
+	.test-description {
+		text-align: center;
+		font-size: 20px;
+		font-weight: normal;
+	}
+
+	.meter { 
+		height: 25px;
+		width: 100%;
+		position: relative;
+		background: #efefef;
+		border-radius: 25px;
+		padding: 5px;
+		box-shadow: inset 0 -1px 1px rgba(255, 255, 255, 0.3);
+	  }
+
+	.meter > span {
+		display: block;
+		height: 100%;
+		border-top-right-radius: 8px;
+		border-bottom-right-radius: 8px;
+		border-top-left-radius: 20px;
+		border-bottom-left-radius: 20px;
+		background-color: rgb(43,194,83);
+		background-image: linear-gradient(
+		  center bottom,
+		  rgb(43,194,83) 37%,
+		  rgb(84,240,84) 69%
+		);
+		box-shadow: 
+		  inset 0 2px 9px  rgba(255,255,255,0.3),
+		  inset 0 -2px 6px rgba(0,0,0,0.4);
+		position: relative;
+		overflow: hidden;
+	  }
+
+
+	  .test {
+		  display: flex;
+		  flex-direction: column;
+		  height: 60vh;
+	  }
+
+	  .test-words {
+		  display: flex;
+		  flex-wrap: wrap;
+		  margin-top: 20%;
+	  }
+
+	  .test-result {
+		  	display: flex;
+			flex-direction: row;
+			flex-wrap: wrap;
+			padding: 15px 0;
+			margin-top: 10%;
+			padding-bottom: 5%;
+			border-bottom: 1px solid #ccc;
+	  }
+
+	  .test-result > span {
+		padding: 15px 30px;
+		display: flex;
+		text-align: center;
+		margin: 5px 5px 0;
+		font-size: 20px;
+		border-radius: 10px;
+		font-weight: normal;
+		cursor: pointer;
+		transition: 0.4s all;
+		border: 1px solid #ccc;
+	  }
+
+	  .test-result > span:hover {
+		background-color: #ccc;
+	  }
+
+	  .test-words > span {
+			display: flex;
+			padding: 15px 30px;
+			margin: 10px;
+			border: 1px solid #ccc;
+			border-radius: 10px;
+			cursor: pointer;
+			transition: 0.4s all;
+	  }
+
+	  .test-words > span:hover {
+			background-color: #ccc;
+  		}
+
+	.swal_green {
+		color:#49ca00;
+	}
+
+	.swal_red {
+		color: red;
+	}
+
+	.block_logs {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.block_button {
+		display: flex;
+	}
+
+	.block_log {
+		display: flex;
+		flex-direction: column;
+		border: 1px solid #efefef;
+		background-color: #efefef;
+		padding: 15px;
+		border-radius: 5px;
+		margin: 5px 0;
+	}
+
+	.block_log > span {
+		padding: 10px;
+	}
+
+	.block_user {
+		display: flex;
+		border: 1px solid #111;
+		background-color: #efefef;
+		flex-direction: column;
+		padding: 15px;
+		justify-content: center;
+		border-radius: 5px;
+	}
+
+	.block_user > span {
+		display: flex;
+		padding: 10px;
+	}
+
+/* ===================
+	1. Blocks Page
+=================== */
+	
+	.block{
+		display: flex;
+		justify-content: center;
+	}
+
+
+
+/* ===================
+	2. Forms
+=================== */
+
+.form{
+	display: flex;
+	flex-direction: column;
+	width: 30%;
+	margin: auto;
+	transition: 0.5s all;
+}
+
+.swal2-popup .form {
+	width: 70%;
+}
+
+
+.form-block,
+.form-block__in{
+	display: flex;
+	margin: 10px 0px 10px;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+}
+
+.form-block__double{margin: 0;padding: 0;}
+
+.form-block__in{width: 50%;}
+
+.form__label{
+	position: absolute;
+    top: -1.3%;
+    background: #fff;
+    left: 3%;
+    padding: 3px;
+    border-radius: 3px;
+    font-size: 14.5px;
+    color: #666;
+    font-family: GothaProReg;
+    z-index: 1;
+}
+
+.form__input{
+	width: 100%;
+	border: 1px solid #ccc;
+	padding: 20px;
+	cursor: pointer;
+	margin: 10px 0px;
+	background: #fff;
+	border-radius: 3px;
+	font-family: GothaProReg;
+	resize: none;
+}
+
+.form-file {
+	display: flex;
+}
+
+.form-file img {
+	width: 100%;
+	border-radius: 3px;
+}
+
+
+.form__in_input{
+	position: absolute;
+	right: 5%;
+	font-size: 14px;
+	color: #888;
+	padding: 3px;
+}
+
+.form__in_input:hover{
+	color: #000;
+}
+
+.form-block:focus input[type='text'],
+.form-block:hover input[type='text'],
+.form-block:focus input[type='password'],
+.form-block:hover input[type='password'],
+.form-block:focus textarea,
+.form-block:hover textarea{
+	color: black;
+	border-color: black;
+}
+
+.form-block:focus label,
+.form-block:hover label{
+	color: black;
+}
+
+.form__button,
+.form__submit{
+	width: 100%;
+	padding: 13px;
+	cursor: pointer;
+	margin: 10px 0px;
+	border-radius: 3px;
+	background: #2a81dd;
+	color: #fff;
+	border: none;
+	outline: none;
+	font-family: "Verdana", Arial, Helvetica, sans-serif;
+}
+
+.form__button:hover,
+.form__submit:hover{
+	background: #0aa9d7;
+}
+
+.form__mistake{
+	position: absolute;
+	width: 100%;
+	bottom: -27%;
+	text-align: center;
+	color: red;
+	font-size: 12px;
+}
+
+
+.form__under{
+	margin: 1%;
+}
+
+.form__under span,
+.form__under a{
+	margin: 3px;
+    font-family: GothaProReg;
+    text-align: center;
+    font-size: 14.5px;
+    color: #444;
+}
+
+.form__under span svg{font-size: 20px;}
+
+.form__under a{border-bottom: 1px solid transparent;}
+
+.form__under a:hover{border-color: #222; color:#222;}
+
+input[type="file"] {
+	z-index: 1;
+	opacity: 0;
+}
+
+.upload-file {
+	display: flex;
+	justify-content: center;
+	padding: 20px 0;
+	position: absolute;
+	background: #fff;
+	width: 99%;
+	border: 1px solid #ccc;
+}
+
+.upload-file:hover {
+	border-color: black;
+}
+
+
+/* Join Form List and Links */
+.form-list{
+	display: flex;
+	flex-direction: column;
+	position: relative;
+}
+
+.form-link{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding: 10px;
+}
+
+
+/* ===================
+	5. Modal Windows
+=================== */
+
+/* Modal Footer */
+
+.swal2-popup {
+	width: 60%;
+}
+
+.swal-footer{
+	display: flex;
+	justify-content: center;
+}
+
+/* Modal Buttons */
+.swal-button{
+	padding: 15px 50px;
+	outline: none;
+}
+.swal-button:focus{
+	box-shadow: none;
+}
+
+/* Modal Text*/
+.swal-text{
+	text-align: center;
+}
+
+
+/* ===================
+	Mobile Settings 763x1024
+=================== */
+
+@media screen and (min-width: 763px) and (max-width: 1024px){
+
+	/* ===================
+		Settings
+	=================== */
+	hr{ width: 60%; }
+	main{ width: 100%; }
+
+	/* ===================
+		1. Blocks Page
+	=================== */
+	
+	.block {
+		display: flex;
+		justify-content: center;
+	}
+
+	/* ===================
+		2. Forms
+	=================== */
+
+	.form {
+		width: 60%;
+	}
+
+	.nav-mid {
+		width: 50%;
+	}
+	
+	/* ===================
+		5. Modal Windows
+	=================== */
+	.swal2-popup {
+    	width: 100% !important;
+	}
+
+
+}
+
+
+
+/* ===================
+	Mobile Settings 100x763
+=================== */
+
+@media screen and (min-width: 100px) and (max-width: 763px){
+	
+
+	/* ===================
+		Settings
+	=================== */
+	hr{ width: 80%; }
+	main{ width: 100%; }
+
+	/* ===================
+		1. Blocks Page
+	=================== */
+	
+	.block{
+		display: flex;
+		justify-content: center;
+	}
+
+	/* ===================
+		2. Forms
+	=================== */
+
+	.form{
+		width: 80%;
+	}
+	
+
+	/* ===================
+		3. Items
+	=================== */
+	
+	.item {
+		width: 90%;
+		height: 500px;
+	}
+
+	.view-item__modal {
+		flex-direction: column;
+		overflow-y: auto;
+	}
+
+	.view-item__left {
+		width: 100%;
+		height: 100%;
+	}
+
+	.view-item__right {
+		width: 100%;
+	}
+	
+	/* ===================
+		5. Modal Windows
+	=================== */
+	.swal2-popup {
+		width: 100%;
+		padding: 0;
+	}
+	.swal2-popup.swal2-toast {
+		width: 100% !important;
+		border-radius: 0;
+	}
+}
